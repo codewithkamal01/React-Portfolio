@@ -11,7 +11,7 @@ function Contact() {
         Let’s <span className="text-[#5B5A5A]">build</span> something{" "}
         <span className="text-[#EB6200]">great</span>!
       </h1>
-      <div className="flex items-center gap-3 group cursor-pointer w-fit">
+      <div className="flex justify-center md:justify-start gap-3 group cursor-pointer">
         <MdOutlineEmail className="text-2xl text-[#AAAAAA] group-hover:text-[#EB6200]" />
         <a
           href="mailto:kamalmanna606@gmail.com"
@@ -22,7 +22,7 @@ function Contact() {
         <FaCircleArrowRight className="text-xl text-[#AAAAAA] group-hover:text-[#EB6200] transition" />
       </div>
       {/* Social Icons */}
-      <div className="mt-4 mb-8 flex gap-5 text-xl text-[#AAAAAA]">
+      <div className="mt-4 mb-8 flex justify-center md:justify-start  gap-5 text-xl text-[#AAAAAA]">
         <a href="https://linkedin.com/in/kamalmanna" target="_blank">
           <BsLinkedin className="hover:text-[#EB6200] hover:scale-110 transition" />
         </a>

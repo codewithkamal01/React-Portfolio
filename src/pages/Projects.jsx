@@ -11,7 +11,7 @@ function Projects() {
         <h1 className="mt-3 text-3xl md:text-5xl font-extrabold leading-tight">
           A <span className="text-[#AAAAAA]">glimpse</span> of what <br />
           i've{" "}
-          <span className="text-[#EB6200] inline-flex items-baseline gap-4 md:gap-10 w-full md:w-5xl">
+          <span className="text-[#EB6200] inline-flex items-baseline gap-4 md:gap-10 w-full md:w-7xl">
             built.
             <span className="h-[1px] flex-1 bg-[#AAAAAA]"></span>
           </span>
