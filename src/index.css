@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html {
   scroll-behavior: smooth;
 }
@@ -17,4 +18,8 @@ html {
 }
 .animate-slide:hover {
   animation-play-state: paused;
+}
+body {
+  overflow-x: hidden;
+  font-family: 'Epilogue', sans-serif;
 }
