@@ -1,4 +1,5 @@
 import AboutBanner from "../components/AboutBanner";
+import SkillsOrbit from "../components/SkillsOrbit";
 import SkillsSlide from "../components/SkillsSlide";
 
 function About() {
@@ -11,7 +12,8 @@ function About() {
           <span className="text-[#D5D5D5]">development</span>{" "}
         </h1>
       </div>
-      <SkillsSlide />
+      <SkillsOrbit/>
+      {/* <SkillsSlide /> */}
     </div>
   );
 }

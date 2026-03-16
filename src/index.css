@@ -4,21 +4,17 @@ html {
   scroll-behavior: smooth;
 }
 
-@keyframes slide {
+@keyframes spinSlow {
   from {
-    transform: translateX(0);
+    transform: rotate(0deg);
   }
   to {
-    transform: translateX(-50%);
+    transform: rotate(360deg);
   }
 }
 
-.animate-slide {
-  animation: slide 15s linear infinite;
-}
-
-.animate-slide:hover {
-  animation-play-state: paused;
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
 }
 
 body {
