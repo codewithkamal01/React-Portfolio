@@ -10,7 +10,7 @@ function Home() {
       </div>
       {/* Resume Button */}
       <a href={Resume} download>
-        <button className="relative cursor-pointer overflow-hidden mt-5 md:mt-8 px-3 py-2 md:px-6 md:py-3 w-36 md:w-52 rounded-xl bg-[#0F0F0F] text-white group">
+        <button className="relative cursor-pointer overflow-hidden mt-5 md:mt-8 px-3 py-2 md:px-6 md:py-3 w-40 md:w-56 rounded-xl bg-[#0F0F0F] text-white group">
           <span className="relative z-10 text-sm md:text-lg">
             Download Resume
           </span>

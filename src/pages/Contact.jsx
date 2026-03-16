@@ -1,66 +1,106 @@
-import { MdOutlineEmail } from "react-icons/md";
-import { FaCircleArrowRight } from "react-icons/fa6";
-import { BsLinkedin } from "react-icons/bs";
-import { FaXTwitter } from "react-icons/fa6";
-import { BsGithub } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
+import { useState } from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
+
 function Contact() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Message sent successfully!");
+    setForm({ name: "", email: "", message: "" });
+  };
+
   return (
-    <div className="bg-[#0F0F0F] px-6 md:px-20 py-10 mt-10 text-white">
-      <h1 className="text-3xl md:text-4xl font-semibold pb-10">
-        Let’s <span className="text-[#5B5A5A]">build</span> something{" "}
-        <span className="text-[#EB6200]">great</span>!
-      </h1>
-      <div className="flex justify-center md:justify-start gap-3 group cursor-pointer">
-        <MdOutlineEmail className="text-2xl text-[#AAAAAA] group-hover:text-[#EB6200]" />
-        <a
-          href="mailto:kamalmanna606@gmail.com"
-          className="text-[#AAAAAA] group-hover:text-white transition"
-        >
-          kamalmanna606@gmail.com
-        </a>
-        <FaCircleArrowRight className="text-xl text-[#AAAAAA] group-hover:text-[#EB6200] transition" />
-      </div>
-      {/* Social Icons */}
-      <div className="mt-4 mb-8 flex justify-center md:justify-start  gap-5 text-xl text-[#AAAAAA]">
-        <a href="https://linkedin.com/in/kamalmanna" target="_blank">
-          <BsLinkedin className="hover:text-[#EB6200] hover:scale-110 transition" />
-        </a>
+    <section id="contact" className="py-20 px-6 bg-gray mt-20">
+      <div className="max-w-6xl mx-auto">
 
-        <a href="https://twitter.com/kamalmanna" target="_blank">
-          <FaXTwitter className="hover:text-[#EB6200] hover:scale-110 transition" />
-        </a>
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold">Contact Me</h2>
+          <p className="text-gray-600 mt-3">
+            Have a project or just want to say hello? Feel free to message me.
+          </p>
+        </div>
 
-        <a href="https://github.com/codewithkamal01" target="_blank">
-          <BsGithub className="hover:text-[#EB6200] hover:scale-110 transition" />
-        </a>
+        <div className="grid md:grid-cols-2 gap-10">
 
-        <a href="https://instagram.com/kamal_s_photography" target="_blank">
-          <BsInstagram className="hover:text-[#EB6200] hover:scale-110 transition" />
-        </a>
-      </div>
-      <div className="mt-8 mb-3 h-[1px] w-full bg-gradient-to-r from-transparent via-[#2a2a2a] to-transparent"></div>
-      <div className="flex flex-col gap-6 md:flex-row justify-between md:py-5 text-xs md:text-sm text-[#AAAAAA]">
-        <p className="text-center md:text-left">
-          © 2026 Kamal Manna. All rights reserved.
-        </p>
-        <div className="flex gap-7 justify-center">
-          <a href="#home" className="hover:text-white">
-            Home
-          </a>
-          <a href="#about" className="hover:text-white">
-            About me
-          </a>
-          <a href="#projects" className="hover:text-white">
-            My works
-          </a>
-          <a href="#contact" className="hover:text-white">
-            Contact
-          </a>
+          {/* Left Info */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
+              <Mail className="text-[#EB6200]" />
+              <span className="text-gray-700">kamalmanna606@gmail.com</span>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <Phone className="text-[#EB6200]" />
+              <span className="text-gray-700">+91 95938 64403</span>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <MapPin className="text-[#EB6200]" />
+              <span className="text-gray-700">Kolkata, India</span>
+            </div>
+
+            <p className="text-gray-600 mt-6">
+              I'm currently open for freelance work and collaboration.
+              If you have any idea or project in mind, let's connect.
+            </p>
+          </div>
+
+          {/* Contact Form */}
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white shadow-lg rounded-xl p-8 space-y-6"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={form.name}
+              onChange={handleChange}
+              required
+              className="w-full border rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[#EB6200]"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={form.email}
+              onChange={handleChange}
+              required
+              className="w-full border rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[#EB6200]"
+            />
+
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              value={form.message}
+              onChange={handleChange}
+              required
+              className="w-full border rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[#EB6200]"
+            />
+
+            <button
+              type="submit"
+              className="w-full bg-[#EB6200] text-white py-3 rounded-md hover:bg-[#be5204] transition"
+            >
+              Send Message
+            </button>
+          </form>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 }
-
 export default Contact;
