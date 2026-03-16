@@ -1,6 +1,5 @@
 import AboutBanner from "../components/AboutBanner";
 import SkillsOrbit from "../components/SkillsOrbit";
-import SkillsSlide from "../components/SkillsSlide";
 
 function About() {
   return (
@@ -13,7 +12,6 @@ function About() {
         </h1>
       </div>
       <SkillsOrbit/>
-      {/* <SkillsSlide /> */}
     </div>
   );
 }
