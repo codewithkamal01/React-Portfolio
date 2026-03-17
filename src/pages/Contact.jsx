@@ -21,22 +21,28 @@ function Contact() {
   return (
     <section id="contact" className="py-20 px-6 bg-gray mt-20">
       <div className="max-w-6xl mx-auto">
-
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold">Contact Me</h2>
-          <p className="text-gray-600 mt-3">
+          <h1 className="text-4xl md:text-5xl font-semibold">
+            Let’s <span className="text-[#5B5A5A]">build</span> something{" "}
+            <span className="text-[#EB6200]">great</span>!
+          </h1>
+          <p className="text-gray-600 mt-4">
             Have a project or just want to say hello? Feel free to message me.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10">
-
           {/* Left Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-4">
               <Mail className="text-[#EB6200]" />
-              <span className="text-gray-700">kamalmanna606@gmail.com</span>
+              <a
+                href="mailto:kamalmanna606@gmail.com"
+                className="text-gray-700"
+              >
+                kamalmanna606@gmail.com
+              </a>
             </div>
 
             <div className="flex items-center gap-4">
@@ -50,8 +56,8 @@ function Contact() {
             </div>
 
             <p className="text-gray-600 mt-6">
-              I'm currently open for freelance work and collaboration.
-              If you have any idea or project in mind, let's connect.
+              I'm currently open for freelance work and collaboration. If you
+              have any idea or project in mind, let's connect.
             </p>
           </div>
 
@@ -97,7 +103,6 @@ function Contact() {
               Send Message
             </button>
           </form>
-
         </div>
       </div>
     </section>

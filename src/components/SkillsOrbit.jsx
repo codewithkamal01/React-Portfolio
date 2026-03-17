@@ -67,7 +67,7 @@ export default function SkillsOrbit() {
       <div className="relative w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] md:w-[520px] md:h-[520px] flex items-center justify-center">
         {/* Center */}
         <div className="absolute w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-black text-white rounded-full flex items-center justify-center font-semibold shadow-lg">
-          MERN
+          SKILLS
         </div>
 
         {/* Orbit */}
