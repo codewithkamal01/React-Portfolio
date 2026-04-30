@@ -28,8 +28,8 @@ function Contact() {
         "service_4rkrzx8",
         "template_1fijzkc",
         {
-          from_name: form.name,
-          from_email: form.email,
+          name: form.name,
+          email: form.email,
           message: form.message,
           time: new Date().toLocaleString(),
         },
