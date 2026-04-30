@@ -9,17 +9,19 @@ function Contact() {
     message: "",
   });
 
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState(""); // success / error
+  const [status, setStatus] = useState("idle");
+  // idle | loading | success | error
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    setStatus("");
+    setStatus("loading");
 
     try {
       await emailjs.send(
@@ -29,17 +31,36 @@ function Contact() {
           from_name: form.name,
           from_email: form.email,
           message: form.message,
+          time: new Date().toLocaleString(),
         },
         "QntfTSCTTvYCGn8IY",
       );
 
       setStatus("success");
       setForm({ name: "", email: "", message: "" });
+
+      // reset button after 3 sec
+      setTimeout(() => setStatus("idle"), 3000);
     } catch (error) {
       setStatus("error");
-    }
 
-    setLoading(false);
+      // reset error after 3 sec
+      setTimeout(() => setStatus("idle"), 3000);
+    }
+  };
+
+  // Button UI based on state
+  const getButtonContent = () => {
+    if (status === "loading") return "Sending...";
+    if (status === "success") return "✅ Sent!";
+    if (status === "error") return "❌ Failed";
+    return "Send Message";
+  };
+
+  const getButtonStyle = () => {
+    if (status === "success") return "bg-green-500";
+    if (status === "error") return "bg-red-500";
+    return "bg-[#EB6200] hover:bg-[#be5204]";
   };
 
   return (
@@ -96,6 +117,7 @@ function Contact() {
               value={form.name}
               onChange={handleChange}
               required
+              disabled={status === "loading"}
               className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#EB6200]"
             />
 
@@ -106,6 +128,7 @@ function Contact() {
               value={form.email}
               onChange={handleChange}
               required
+              disabled={status === "loading"}
               className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#EB6200]"
             />
 
@@ -116,32 +139,20 @@ function Contact() {
               value={form.message}
               onChange={handleChange}
               required
+              disabled={status === "loading"}
               className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#EB6200]"
             />
 
-            {/* Button */}
+            {/* Smart Button */}
             <button
               type="submit"
-              disabled={loading}
-              className="w-full bg-[#EB6200] text-white py-3 rounded-md 
-             hover:bg-[#be5204] transition 
-             animate-pulse"
+              disabled={status === "loading"}
+              className={`w-full py-3 rounded-lg text-white transition flex justify-center items-center gap-2 ${getButtonStyle()} ${
+                status === "loading" ? "animate-pulse" : ""
+              }`}
             >
-              {loading ? "Sending..." : "Send Message"}
+              {getButtonContent()}
             </button>
-
-            {/* Success / Error Message */}
-            {status === "success" && (
-              <p className="text-green-600 text-sm text-center">
-                ✅ Message sent successfully!
-              </p>
-            )}
-
-            {status === "error" && (
-              <p className="text-red-500 text-sm text-center">
-                ❌ Something went wrong. Try again.
-              </p>
-            )}
           </form>
         </div>
       </div>
