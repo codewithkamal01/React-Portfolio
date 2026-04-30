@@ -1,3 +1,4 @@
+import Experience from "../components/Experience";
 import ProjectList from "../components/ProjectList";
 
 function Projects() {
@@ -19,6 +20,7 @@ function Projects() {
       </div>
 
       <ProjectList />
+      <Experience/>
     </div>
   );
 }

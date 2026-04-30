@@ -8,12 +8,12 @@ function Loader({ onFinish }) {
       setProgress((old) => {
         if (old >= 100) {
           clearInterval(interval);
-          setTimeout(onFinish, 300);
+          setTimeout(onFinish, 200);
           return 100;
         }
         return old + 5;
       });
-    }, 40);
+    }, 20);
 
     return () => clearInterval(interval);
   }, [onFinish]);

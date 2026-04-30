@@ -1,9 +1,15 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 @keyframes spinSlow {
   from {
     transform: rotate(0deg);
@@ -12,12 +18,13 @@ html {
     transform: rotate(360deg);
   }
 }
-
 .animate-spin-slow {
   animation: spinSlow 20s linear infinite;
 }
-
 body {
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
   overflow-x: hidden;
   font-family: 'Epilogue', sans-serif;
 }

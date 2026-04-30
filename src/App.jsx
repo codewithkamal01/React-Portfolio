@@ -16,21 +16,23 @@ function App() {
       ) : (
         <div className="min-h-screen bg-[#F5F5F5]">
           <Navbar />
-          <section id="home">
-            <Home />
-          </section>
-          <section id="about">
-            <About />
-          </section>
-          <section id="projects">
-            <Projects />
-          </section>
-             <section id="contact">
-            <Contact />
-          </section>
-          <section id="footer">
-            <Footer />
-          </section>  
+          <div>
+            <section id="home">
+              <Home />
+            </section>
+            <section id="about">
+              <About />
+            </section>
+            <section id="projects">
+              <Projects />
+            </section>
+               <section id="contact">
+              <Contact />
+            </section>
+            <section id="footer">
+              <Footer />
+            </section>
+          </div>
         </div>
       )}
     </>
