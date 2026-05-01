@@ -26,5 +26,86 @@ body {
   padding: 0;
   min-width: 100vw;
   overflow-x: hidden;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
+}
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px #eb6200;
+  }
+  50% {
+    box-shadow: 0 0 20px #eb6200;
+  }
+}
+
+.animate-glow {
+  animation: glow 1.5s infinite ease-in-out;
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-floatCard {
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+/* Testimonial css */
+
+.testimonial-card {
+  min-width: 280px;
+  padding: 18px;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  background: #1a1a1a;
+  border: 1px solid rgba(235, 98, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(235, 98, 0, 0.5);
+}
+/* marquee animations */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee-left {
+  width: max-content;
+  animation: scrollLeft 20s linear infinite;
+}
+
+.marquee-right {
+  width: max-content;
+  animation: scrollRight 20s linear infinite;
+}
+.marquee-left:hover,
+.marquee-right:hover {
+  animation-play-state: paused;
+}
+.mask-fade {
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 10%, black 20%, black 80%, rgba(0,0,0,0.6) 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 10%, black 20%, black 80%, rgba(0,0,0,0.6) 90%, transparent 100%);
 }

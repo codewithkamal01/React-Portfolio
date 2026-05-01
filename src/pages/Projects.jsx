@@ -18,7 +18,6 @@ function Projects() {
           </span>
         </h1>
       </div>
-
       <ProjectList />
       <Experience/>
     </div>
