@@ -1,4 +1,4 @@
-import Resume from "../assets/Resume.pdf";
+import Resume from "../assets/RESUME.pdf";
 import Hero from "../assets/herosec.jpg";
 
 function Home() {
@@ -14,9 +14,13 @@ function Home() {
         />
       </div>
       {/* Resume Button */}
-      <button className="cursor-pointer mt-3 px-3 py-2 w-42 rounded-xl bg-[#0F0F0F] text-white animate-pulse">
+      <a
+        href={Resume}
+        download
+        className="inline-block cursor-pointer mt-3 px-3 py-2 w-42 rounded-xl bg-[#0F0F0F] text-white animate-pulse text-center"
+      >
         Download Resume
-      </button>
+      </a>
     </div>
   );
 }
