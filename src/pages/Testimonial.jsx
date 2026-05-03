@@ -1,17 +1,22 @@
 import React, { useMemo } from "react";
 import TestimonialCard from "../components/TestimonialCard";
+import Raju from "../assets/testimonials/Raju.jpg";
+import Tridip from "../assets/testimonials/Tridip.jpg";
+import Chandra from "../assets/testimonials/Chandra.jpg";
+import Abhik from "../assets/testimonials/Abhik.jpg";
+import Anurup from "../assets/testimonials/Anurup.jpg";
 
 const testimonials = [
   {
-    name: "Rahul Sharma",
+    name: "Raju Kapmti",
     company: "TechNova",
     text: "Great developer, very clean work!",
     rating: 5,
-    avatar: "https://i.pravatar.cc/100?img=1",
+    avatar: Raju,
     verified: true,
   },
   {
-    name: "Ankit Verma",
+    name: "Ankit Mondal",
     company: "CodeCraft",
     text: "Delivered before deadline, impressive.",
     rating: 3,
@@ -19,27 +24,42 @@ const testimonials = [
     verified: true,
   },
   {
-    name: "Sneha Roy",
+    name: "Sneha Das",
     company: "UI Studio",
     text: "UI/UX skills are really strong.",
     rating: 4,
     avatar: "https://i.pravatar.cc/100?img=9",
-    verified: true,
   },
   {
-    name: "Priya Das",
+    name: "Tridip Nayak",
     company: "PixelWorks",
     text: "Professional and easy to work with.",
     rating: 5,
-    avatar: "https://i.pravatar.cc/100?img=21",
+    avatar: Tridip,
+    verified: true,
   },
   {
-    name: "Aman Khan",
+    name: "Anurup Haldar",
+    company: "WebWizards",
+    text: "Highly recommend for web projects.",
+    rating: 3,
+    avatar: Anurup,
+    verified: true,
+  },
+  {
+    name: "Chandranath Mondal",
     company: "DevHub",
     text: "Highly recommend for web projects.",
     rating: 3,
-    avatar: "https://i.pravatar.cc/100?img=13",
+    avatar: Chandra,
     verified: true,
+  },
+    {
+    name: "Abhik Rajak",
+    company: "OctaNet",
+    text: "Highly recommend for web projects.",
+    rating: 3,
+    avatar: Abhik,
   },
 ];
 
@@ -50,7 +70,7 @@ function TestimonialMarquee() {
   );
 
   return (
-    <div className="mt-24 pb-5 overflow-hidden relative px-4 md:px-10 mask-fade md:mask-none">
+    <div className="mt-24 pb-5 overflow-hidden relative px-4 md:px-10 mask-fade">
       {/* header */}
       <div className="mb-12 text-center">
         <p className="text-[#EB6200] text-xs tracking-[0.2em] uppercase mb-3">
