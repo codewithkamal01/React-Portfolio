@@ -1,41 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function Loader({ onFinish }) {
-  const [progress, setProgress] = useState(0);
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((old) => {
-        if (old >= 100) {
-          clearInterval(interval);
-          setTimeout(onFinish, 200);
-          return 100;
-        }
-        return old + 5;
-      });
-    }, 20);
-
-    return () => clearInterval(interval);
+    const timer = setTimeout(onFinish, 2500);
+    return () => clearTimeout(timer);
   }, [onFinish]);
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-[#F5F5F5] gap-6 transition-opacity duration-700">
-
-      <h1 className="text-4xl font-bold tracking-wide">
-        Load<span className="text-[#EB6200]">ing...</span>
-      </h1>
-
-      <div className="w-64 h-[3px] bg-gray-300 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-[#EB6200] transition-all duration-200"
-          style={{ width: `${progress}%` }}
-        ></div>
+    <div className="h-screen flex flex-col items-center justify-center bg-[#F5F5F5] gap-6">
+      <div className="flex items-end gap-1 h-6">
+        <span className="w-2 h-2 bg-[#EB6200] rounded-full animate-[bounce_1s_infinite]"></span>
+        <span className="w-2 h-3 bg-[#EB6200] rounded-full animate-[bounce_1s_infinite_0.1s]"></span>
+        <span className="w-2 h-4 bg-[#EB6200] rounded-full animate-[bounce_1s_infinite_0.2s]"></span>
+        <span className="w-2 h-3 bg-[#EB6200] rounded-full animate-[bounce_1s_infinite_0.3s]"></span>
+        <span className="w-2 h-2 bg-[#EB6200] rounded-full animate-[bounce_1s_infinite_0.4s]"></span>
       </div>
-
-      <p className="text-sm text-gray-500">{progress}%</p>
-
     </div>
   );
 }
-
 export default Loader;
