@@ -13,7 +13,7 @@ function ProjectList() {
     {
       image: project3,
       title: "Business Portfolio",
-      description: "A fully responsive business platform.",
+      description: "A fully responsive business platform with modern design and smooth animations.",
       tech: ["React", "Tailwind CSS", "Framer Motion"],
       livelink: "https://react-design-4.vercel.app/",
       sourcelink: "https://github.com/codewithkamal01/react-design-4",
@@ -23,7 +23,7 @@ function ProjectList() {
       image: project1,
       title: "Notes Management App",
       description:
-        "A collaborative notes management app with real-time updates.",
+        "A collaborative notes management app with real-time updates",
       tech: ["React", "Tailwind", "Crud Operations"],
       livelink: "https://noteshub-indol.vercel.app/",
       sourcelink: "https://github.com/codewithkamal01/notes-app",
@@ -41,7 +41,7 @@ function ProjectList() {
     {
       image: project2,
       title: "Weather Dashboard",
-      description: "An interactive weather dashboard - real-time weather.",
+      description: "An interactive weather dashboard - real-time weather updates and forecasts.",
       tech: ["JavaScript", "API Integration", "React"],
       livelink: "https://weather-app-react-iota.vercel.app/",
       sourcelink: "https://github.com/codewithkamal01/Weather-App---React",

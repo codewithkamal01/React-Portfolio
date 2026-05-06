@@ -7,6 +7,7 @@ import Loader from "./components/Loader";
 import Footer from "./pages/Footer";
 import Contact from "./pages/Contact";
 import TestimonialMarquee from "./pages/Testimonial";
+import ChatWidget from "./components/ChatWidget";
 
 function App() {
   const [Loading, setLoading] = useState(true);
@@ -37,6 +38,7 @@ function App() {
               <Footer />
             </section>
           </div>
+          <ChatWidget />
         </div>
       )}
     </>
