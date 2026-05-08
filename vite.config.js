@@ -9,7 +9,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     sitemap({
-      hostname: "https://kamal-s-portfolio-alpha.vercel.app",
+      hostname: "https://kamalmanna.vercel.app",
     }),
   ],
 
