@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kamal-s-portfolio-alpha.vercel.app/sitemap.xml
