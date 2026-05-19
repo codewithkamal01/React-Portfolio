@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 function Loader({ onFinish }) {
   useEffect(() => {
-    const timer = setTimeout(onFinish, 2500);
+    const timer = setTimeout(onFinish, 1500);
     return () => clearTimeout(timer);
   }, [onFinish]);
 

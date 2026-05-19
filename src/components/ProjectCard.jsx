@@ -18,7 +18,7 @@ const ProjectCard = memo(({ projects, singleButton }) => {
     () =>
       `bg-gradient-to-br from-gray-100 to-gray-200 
      rounded-xl p-4 flex justify-center items-center overflow-hidden
-     h-48 md:h-56 ${singleButton ? "md:w-1/2" : ""}`,
+     h-48 md:h-70 ${singleButton ? "md:w-1/2" : ""}`,
     [singleButton],
   );
 
@@ -41,7 +41,7 @@ const ProjectCard = memo(({ projects, singleButton }) => {
 
   const badgeStyles = {
     featured: "bg-[#EB6200] text-white",
-    new: "bg-green-500 text-white",
+    latest: "bg-green-500 text-white",
     "in-progress": "bg-yellow-400 text-black",
   };
 
@@ -63,7 +63,7 @@ const ProjectCard = memo(({ projects, singleButton }) => {
           src={projects.image}
           alt={projects.title}
           loading="lazy"
-          className="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-103"
         />
       </div>
 
