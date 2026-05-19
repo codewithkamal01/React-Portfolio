@@ -90,7 +90,7 @@ function ProjectList() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-5 md:px-10 mt-10">
+    <section className="max-w-7xl mx-auto px-5 md:px-20 mt-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {visibleProjects.map((project, index) => (
           <div

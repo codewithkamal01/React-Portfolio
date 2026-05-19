@@ -6,7 +6,7 @@ const ProjectCard = memo(({ projects, singleButton }) => {
     () =>
       `group relative hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 
      border border-gray-200 bg-white/70 backdrop-blur-md 
-     rounded-2xl p-5 md:p-8 ${
+     rounded-2xl p-4 md:p-8 ${
        singleButton
          ? "flex flex-col md:flex-row gap-8 items-center"
          : "h-full flex flex-col justify-between"
@@ -18,7 +18,7 @@ const ProjectCard = memo(({ projects, singleButton }) => {
     () =>
       `bg-gradient-to-br from-gray-100 to-gray-200 
      rounded-xl p-4 flex justify-center items-center overflow-hidden
-     h-48 md:h-70 ${singleButton ? "md:w-1/2" : ""}`,
+     h-54 md:h-70 ${singleButton ? "md:w-1/2" : ""}`,
     [singleButton],
   );
 
