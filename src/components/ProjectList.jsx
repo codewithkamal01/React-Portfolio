@@ -19,7 +19,7 @@ function ProjectList() {
       title: "CampusNotes",
       description:
         "A modern student-focused notes sharing platform with PYQs, uploads, and an intuitive dashboard experience.",
-      tech: ["MERN Stack", "Tailwind CSS"],
+      tech: ["MERN Stack", "JWT", "Google OAuth","Supabase Storage"],
       livelink: "https://campus-notes-one.vercel.app/",
       sourcelink:
         "https://github.com/codewithkamal01/CampusNotes---A-Mern-Stack-Project",
