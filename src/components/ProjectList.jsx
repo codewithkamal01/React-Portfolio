@@ -1,12 +1,11 @@
 import ProjectCard from "./ProjectCard";
-import project1 from "../assets/pro6.png";
-import project2 from "../assets/pro2.jpg";
-import project3 from "../assets/pro3.jpg";
-import project4 from "../assets/pro4.jpg";
-import project5 from "../assets/pro5.jpg";
-import project7 from "../assets/pro7.png";
-import project8 from "../assets/pro8.png";
-import project9 from "../assets/pro9.png";
+import project1 from "../assets/notes-management-app-dashboard.webp";
+import project3 from "../assets/social-media-webapp-feed.webp";
+import project4 from "../assets/personal-portfolio-homepage.webp";
+import project5 from "../assets/ecommerce-webapp-homepage.webp";
+import project7 from "../assets/campusnotes-dashboard.webp";
+import project8 from "../assets/autocloud-guard-monitoring.webp";
+import project9 from "../assets/creyotech-digital-agency-homepage.webp";
 
 import { useState } from "react";
 
@@ -19,7 +18,7 @@ function ProjectList() {
       title: "CampusNotes",
       description:
         "A modern student-focused notes sharing platform with PYQs, uploads, and an intuitive dashboard experience.",
-      tech: ["MERN Stack", "JWT", "Google OAuth","Supabase Storage"],
+      tech: ["MERN Stack", "JWT", "Google OAuth", "Supabase Storage"],
       livelink: "https://campus-notes-one.vercel.app/",
       sourcelink:
         "https://github.com/codewithkamal01/CampusNotes---A-Mern-Stack-Project",
@@ -58,7 +57,7 @@ function ProjectList() {
     {
       image: project9,
       title: "Creyotech - A Digital Agency",
-      description: "A renowned IT service company website developed by me.",
+      description: "A renowned IT service company's website developed by me during internship period.",
       tech: ["React js", "Tailwind css", "Framer Motion"],
       livelink: "",
       sourcelink: "",

@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
 import TestimonialCard from "../components/TestimonialCard";
-import Raju from "../assets/testimonials/Raju.jpg";
-import Tridip from "../assets/testimonials/Tridip.jpg";
-import Chandra from "../assets/testimonials/Chandra.jpg";
-import Abhik from "../assets/testimonials/Abhik.jpg";
-import Anurup from "../assets/testimonials/Anurup.jpg";
+import Raju from "../assets/testimonials/client-testimonial-1.webp";
+import Tridip from "../assets/testimonials/client-testimonial-2.webp";
+import Chandra from "../assets/testimonials/client-testimonial-3.webp";
+import Abhik from "../assets/testimonials/client-testimonial-4.webp";
+import Anurup from "../assets/testimonials/client-testimonial-5.webp";
 
 const testimonials = [
   {
