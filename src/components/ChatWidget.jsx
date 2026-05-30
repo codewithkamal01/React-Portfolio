@@ -55,163 +55,113 @@ function ChatWidget() {
     const msg = message.toLowerCase().trim();
 
     // Greetings
-    if (
-      msg.includes("hello") ||
-      msg.includes("hi") ||
-      msg.includes("hey") ||
-      msg.includes("yo")
-    ) {
-      return "Hey there 👋 Welcome to Kamal's portfolio. I'm your virtual assistant and I can guide you through his projects, skills, technologies, experience and services. Try asking something like 'What projects have you built?' 🚀";
+    if (/(hello|hi|hey|yo)/.test(msg)) {
+      return "👋 Hi! Welcome to Kamal's portfolio. Ask me about his skills, projects, experience, or services.";
     }
+    // Acknowledgements
+    if (/^(ok|okay|okk|thanks|thank you|cool|great|nice|awesome)$/.test(msg)) {
+      const replies = [
+        "😊 Happy to help!",
+        "👍 Great! Let me know if you'd like to know more.",
+        "🚀 Feel free to ask about projects, skills, or experience.",
+        "✨ I'm here if you have any other questions.",
+      ];
 
+      return replies[Math.floor(Math.random() * replies.length)];
+    }
     // About
-    if (
-      msg.includes("who are you") ||
-      msg.includes("about") ||
-      msg.includes("yourself") ||
-      msg.includes("introduce")
-    ) {
-      return "I'm Kamal's AI-powered portfolio assistant 🤖 Built to help visitors explore his work, technical skills, learning journey and development services in an interactive way.";
+    if (/(who are you|about|yourself|introduce)/.test(msg)) {
+      return "🤖 I'm Kamal's AI portfolio assistant. I help visitors learn about his work, skills, and projects.";
     }
 
-    // Skills & Tech Stack
-    if (
-      msg.includes("skill") ||
-      msg.includes("tech") ||
-      msg.includes("stack") ||
-      msg.includes("technology") ||
-      msg.includes("tools")
-    ) {
-      return "Kamal primarily works with React.js, Tailwind CSS and JavaScript while actively learning the MERN stack including Node.js, Express.js and MongoDB. He also focuses heavily on modern UI design, responsiveness and frontend performance.";
+    // Skills
+    if (/(skill|tech|stack|technology|tools)/.test(msg)) {
+      return "💻 Kamal works with React.js, JavaScript, Tailwind CSS, and is currently learning the MERN stack.";
     }
 
-    // MERN / Full Stack
-    if (
-      msg.includes("mern") ||
-      msg.includes("full stack") ||
-      msg.includes("backend")
-    ) {
-      return "Yes 🚀 Kamal is currently building and learning full stack MERN applications including authentication systems, dashboards, REST APIs, AI integrations and scalable responsive web applications.";
+    // MERN
+    if (/(mern|full stack|backend)/.test(msg)) {
+      return "🚀 Kamal is learning and building MERN stack applications using MongoDB, Express.js, React, and Node.js.";
     }
 
     // React
-    if (msg.includes("react") || msg.includes("frontend")) {
-      return "React is one of Kamal's strongest frontend technologies ⚛️ He enjoys building smooth, responsive and visually polished interfaces using React, Tailwind CSS and modern component-based architecture.";
+    if (/(react|frontend)/.test(msg)) {
+      return "⚛️ React is one of Kamal's strongest skills. He enjoys building modern, responsive, and user-friendly interfaces.";
     }
 
     // Projects
-    if (
-      msg.includes("project") ||
-      msg.includes("portfolio") ||
-      msg.includes("work") ||
-      msg.includes("built")
-    ) {
-      return "Kamal has worked on multiple frontend and MERN-based projects including portfolio websites, AI-style assistant interfaces, authentication systems, responsive dashboards and a college notes sharing platform concept.";
+    if (/(project|portfolio|work|built)/.test(msg)) {
+      return `📂 Featured Projects:
+• AutoCloud Guard
+• Campus Notes
+• Social Media App
+• Personal Portfolio
+• Creyotech Agency Website
+• Notes Management System`;
     }
 
     // Services
-    if (
-      msg.includes("service") ||
-      msg.includes("hire") ||
-      msg.includes("freelance") ||
-      msg.includes("work with")
-    ) {
-      return "Services include modern frontend development, React applications, responsive portfolio websites, UI redesigns and MERN stack web application development tailored for modern user experiences.";
+    if (/(service|hire|freelance|work with)/.test(msg)) {
+      return "🛠️ Services include React development, responsive websites, UI redesigns, and MERN stack applications.";
     }
 
     // Pricing
-    if (
-      msg.includes("price") ||
-      msg.includes("pricing") ||
-      msg.includes("cost") ||
-      msg.includes("budget")
-    ) {
-      return "Pricing varies depending on project complexity, features and timeline 💡 You can reach out through the contact section for a custom quote and discussion.";
+    if (/(price|pricing|cost|budget)/.test(msg)) {
+      return "💰 Pricing depends on project requirements. Contact Kamal for a personalized quote.";
     }
 
     // Experience
-    if (
-      msg.includes("experience") ||
-      msg.includes("internship") ||
-      msg.includes("worked")
-    ) {
-      return "Kamal has experience building multiple React and frontend projects and has also participated in web development internships and technical learning programs.";
+    if (/(experience|internship|worked)/.test(msg)) {
+      return "📈 Kamal has experience building multiple web applications and has completed web development internships.";
     }
 
     // Education
-    if (
-      msg.includes("study") ||
-      msg.includes("college") ||
-      msg.includes("education") ||
-      msg.includes("bca")
-    ) {
-      return "Kamal is currently pursuing a BCA degree while continuously improving his skills in frontend engineering, MERN stack development and UI/UX design.";
+    if (/(study|college|education|bca)/.test(msg)) {
+      return "🎓 Kamal is pursuing a BCA degree while continuously improving his web development skills.";
     }
 
     // Contact
-    if (
-      msg.includes("contact") ||
-      msg.includes("email") ||
-      msg.includes("reach") ||
-      msg.includes("connect")
-    ) {
-      return "You can connect with Kamal through the contact section of this portfolio or reach out via LinkedIn and GitHub for collaborations, internships or freelance opportunities 📩";
+    if (/(contact|email|reach|connect)/.test(msg)) {
+      return "📩 You can connect through the Contact section, GitHub, or LinkedIn.";
     }
 
     // GitHub
     if (msg.includes("github")) {
-      return "You can explore Kamal's GitHub profile to see source code, development projects and ongoing learning experiments 💻";
+      return "💻 Visit Kamal's GitHub profile to explore his projects and source code.";
     }
 
     // LinkedIn
     if (msg.includes("linkedin")) {
-      return "LinkedIn is the best place to connect professionally with Kamal for networking, opportunities and collaborations 🤝";
+      return "🤝 Connect with Kamal on LinkedIn for networking, collaborations, and opportunities.";
     }
 
     // Availability
-    if (
-      msg.includes("available") ||
-      msg.includes("open to work") ||
-      msg.includes("opportunity")
-    ) {
-      return "Yes 👍 Kamal is currently open to internships, collaborations, freelance projects and exciting learning opportunities in web development.";
+    if (/(available|open to work|opportunity)/.test(msg)) {
+      return "✅ Kamal is open to internships, freelance projects, collaborations, and new opportunities.";
     }
 
     // UI / UX
-    if (
-      msg.includes("design") ||
-      msg.includes("ui") ||
-      msg.includes("ux") ||
-      msg.includes("interface")
-    ) {
-      return "Kamal focuses strongly on modern UI/UX principles including responsive layouts, glassmorphism, smooth animations, accessibility and clean premium-looking interfaces ✨";
+    if (/(design|ui|ux|interface)/.test(msg)) {
+      return "✨ Kamal focuses on clean UI, responsive design, accessibility, and smooth user experiences.";
     }
 
-    // APIs / Server
-    if (
-      msg.includes("api") ||
-      msg.includes("server") ||
-      msg.includes("database")
-    ) {
-      return "Kamal is also learning backend technologies like Express.js, REST APIs, MongoDB integration and authentication systems for full stack application development.";
+    // Backend / APIs
+    if (/(api|server|database)/.test(msg)) {
+      return "🗄️ Kamal is learning Express.js, REST APIs, MongoDB, and authentication systems.";
     }
 
     // AI
-    if (
-      msg.includes("ai") ||
-      msg.includes("assistant") ||
-      msg.includes("chatbot")
-    ) {
-      return "This assistant itself is a custom-built AI-style portfolio chatbot created using React, Tailwind CSS and intelligent predefined response logic 🤖";
+    if (/(ai|assistant|chatbot)/.test(msg)) {
+      return "🤖 This chatbot is a custom portfolio assistant built with React and Tailwind CSS.";
     }
 
-    // Resume / CV
-    if (msg.includes("resume") || msg.includes("cv")) {
-      return "You can download Kamal's resume directly through the portfolio hero section.";
+    // Resume
+    if (/(resume|cv)/.test(msg)) {
+      return "📄 You can download Kamal's resume directly from the portfolio.";
     }
 
     // Default
-    return "Hmm 🤔 I don't have a response for that yet. You can send message through the contact section or Try asking about skills, projects, technologies, services, experience or contact details.";
+    return "🤔 I don't have an answer for that yet. Try asking about skills, projects, experience, services, or contact information.";
   };
 
   const sendMessage = (customText = null) => {
@@ -250,18 +200,18 @@ function ChatWidget() {
       <button
         onClick={() => setOpen(!open)}
         className={`fixed bottom-5 right-5 z-50
-        flex items-center justify-center
-        w-14 h-14
-        rounded-full
-        bg-gradient-to-br from-blue-500 to-cyan-500
-        text-white
-        transition-all duration-300
-        hover:scale-110 active:scale-95
-        ${
-          !open
-            ? "shadow-[0_0_25px_rgba(59,130,246,0.7)] animate-pulse"
-            : "shadow-[0_0_15px_rgba(59,130,246,0.3)]"
-        }`}
+  flex items-center justify-center
+  w-14 h-14
+  rounded-full
+  bg-gradient-to-br from-red-500 to-orange-500
+  text-white
+  transition-all duration-300
+  hover:scale-110 active:scale-95
+  ${
+    !open
+      ? "shadow-[0_0_25px_rgba(249,115,22,0.7)] animate-pulse"
+      : "shadow-[0_0_15px_rgba(249,115,22,0.4)]"
+  }`}
       >
         {open ? <X size={24} /> : <Bot size={24} />}
       </button>
@@ -337,7 +287,7 @@ function ChatWidget() {
                 text-sm leading-relaxed
                 ${
                   msg.role === "user"
-                    ? "bg-gradient-to-br from-blue-500 to-cyan-500 text-white rounded-br-sm"
+                    ? "bg-gradient-to-br from-red-500 to-orange-500 text-white rounded-br-sm"
                     : "bg-[#111827] border border-white/5 text-gray-200 rounded-bl-sm"
                 }`}
               >
@@ -349,9 +299,9 @@ function ChatWidget() {
           {loading && (
             <div className="flex justify-start">
               <div className="bg-[#111827] border border-white/5 text-gray-400 px-4 py-3 rounded-2xl text-sm flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-blue-400 animate-bounce"></span>
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce delay-100"></span>
-                <span className="w-2 h-2 rounded-full bg-blue-400 animate-bounce delay-200"></span>
+                <span className="w-2 h-2 rounded-full bg-red-400 animate-bounce"></span>
+                <span className="w-2 h-2 rounded-full bg-red-400 animate-bounce delay-100"></span>
+                <span className="w-2 h-2 rounded-full bg-red-400 animate-bounce delay-200"></span>
               </div>
             </div>
           )}
@@ -406,9 +356,9 @@ function ChatWidget() {
               rounded-2xl
               text-sm
               outline-none
-              focus:border-blue-500
+              focus:border-red-500
               focus:ring-2
-              focus:ring-blue-500/20
+              focus:ring-red-500/20
               transition-all"
             />
 
@@ -417,9 +367,9 @@ function ChatWidget() {
               className="w-11 h-11
               flex items-center justify-center
               rounded-2xl
-              bg-gradient-to-br from-blue-500 to-cyan-500
+              bg-gradient-to-br from-red-500 to-orange-500
               text-white
-              shadow-[0_0_15px_rgba(59,130,246,0.35)]
+              shadow-[0_0_25px_rgba(249,115,22,0.7)]
               hover:scale-105
               active:scale-95
               transition-all duration-300"
