@@ -40,7 +40,7 @@ function ProjectList() {
       description:
         "An cloud guard system - detects vulnerabilities and secure cloud.",
       tech: ["React js", "Tailwinc Css"],
-      livelink: "https://autocloud-guard.vercel.app/dashboard",
+      livelink: "https://autocloud-guard.vercel.app",
       sourcelink: "https://github.com/codewithkamal01/frontend",
     },
 
